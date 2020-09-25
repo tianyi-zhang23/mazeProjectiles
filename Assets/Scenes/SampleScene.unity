@@ -786,6 +786,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FPSController
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 52
@@ -871,10 +879,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 24
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -907,8 +915,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 344, y: 157}
-  m_SizeDelta: {x: 200, y: 30}
+  m_AnchoredPosition: {x: 398.75, y: 164.1}
+  m_SizeDelta: {x: 309.5, y: 61.89673}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1709203395
 GameObject:
@@ -954,6 +962,29 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1874433045 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 1215140114}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1874433050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1874433045}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de5fbc226fb8ef4984cb0a5714e3c4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectileSourceController: {fileID: 1709203395}
+  projectile: {fileID: 631824059124543138, guid: 7e4dc28d84c9c0346a5e69695afb6e65,
+    type: 3}
+  playerCamera: {fileID: 1874433045}
+  forceScale: 15
 --- !u!1 &1930900215 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -969,13 +1000,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1930900215}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8de5fbc226fb8ef4984cb0a5714e3c4d, type: 3}
+  m_Script: {fileID: 11500000, guid: d69a8c390b453ff4989752294c90a88e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  projectileSourceController: {fileID: 1709203395}
-  projectile: {fileID: 631824059124543138, guid: 7e4dc28d84c9c0346a5e69695afb6e65,
-    type: 3}
-  forceScale: 10
 --- !u!65 &1930900221
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -987,5 +1014,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 3.3537915, z: 1}
-  m_Center: {x: 0, y: 1.1768957, z: 0}
+  m_Size: {x: 1, y: 1.4841144, z: 1}
+  m_Center: {x: 0, y: 0.2420572, z: 0}
