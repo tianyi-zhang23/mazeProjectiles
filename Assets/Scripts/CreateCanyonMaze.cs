@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class CreateCanyonMaze : MonoBehaviour
 {
-    private enum TileChildren { HEART,SOUTH,WEST,NORTH,EAST};
     public GameObject completeTile;
     public int xMazeSize;
     public int zMazeSize;

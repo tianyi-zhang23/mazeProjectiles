@@ -1,18 +1,1 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class TileChildren : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
+﻿public enum TileChildren { HEART, SOUTH, WEST, NORTH, EAST }; //declares an enum that matches the components of CompleteMazeTile
