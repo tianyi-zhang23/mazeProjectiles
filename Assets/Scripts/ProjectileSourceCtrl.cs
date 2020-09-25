@@ -14,10 +14,15 @@ public class ProjectileSourceCtrl : MonoBehaviour
         updateText();
     }
 
-    public void deleteProjectileSource()
+    public void deleteProjectileSource() //decrement projectile source
     {
-        numOfProjSource -= 1;
+        numOfProjSource -= (numOfProjSource>0)?1:0; //only decrement number of projectile source if there still is one left
         updateText();
+    }
+
+    public bool hasProjectileSource() //returns true if there is still projectile source
+    {
+        return numOfProjSource > 0;
     }
 
     private void updateText()
