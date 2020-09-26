@@ -18,6 +18,8 @@ public class WinLoseControl : MonoBehaviour
         {
             hasWon = true;
             winPanel.SetActive(true);
+            player.GetComponent<CharacterController>().enabled = false;
+            player.GetComponent<FirstPersonController>().enabled = false;
         }
     }
 
@@ -29,6 +31,9 @@ public class WinLoseControl : MonoBehaviour
     
     IEnumerator loseCoroutine()
     {
+        //waiting 3 seconds before declaring losing is necessary.
+        //If the player uses the last projectile source to destroy the maze, the player should win.
+        //Waiting 3 seconds allows the collision of the projectile with the maze tile to happen, so that win will prevail.
         yield return new WaitForSeconds(3);
         if (!hasWon)
         {
