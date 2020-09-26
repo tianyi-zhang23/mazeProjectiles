@@ -14,6 +14,7 @@ public class UnicursalPathGeneration : MonoBehaviour
     public int xNumOfNodes; //number of nodes along the x-axis
     public int zNumOfNodes; //number of nodes along the z-axis
     public float sideLengthOfTile = 2; //side length of each tile.
+    public GameObject projectileSourceController; //will need to pass information to this object to inform it of the total number of projectiles created along the path
     //The width of the area to generate unicursal path will be 2*sideLengthOfTile*xNumOfNodes+1, and similarly for the height.
     public GameObject tile;
     public GameObject projectileSource;
@@ -73,6 +74,8 @@ public class UnicursalPathGeneration : MonoBehaviour
             }
             prevTilePos = currentPosition;
         }
+        projectileSourceController.GetComponent<ProjectileSourceCtrl>().setTotalNumberOfProjSourceUncollected(numOfProjectileSourceCreated);
+        //let the projectile source controller know about the total number of projectile sources that we have created.
     }
 
 }

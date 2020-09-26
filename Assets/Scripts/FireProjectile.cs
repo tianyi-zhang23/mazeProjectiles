@@ -16,9 +16,9 @@ public class FireProjectile : MonoBehaviour
         if(Input.GetMouseButtonDown(0) && projectileSourceController.GetComponent<ProjectileSourceCtrl>().hasProjectileSource()) //on left mouse click
         {
             
-            GameObject thisProjectile = Instantiate(projectile, transform.position, transform.rotation); //the projectile gets the player's rotation value
+            GameObject thisProjectile = Instantiate(projectile, playerCamera.GetComponent<Camera>().transform.position, playerCamera.GetComponent<Camera>().transform.rotation); //the projectile gets the player's rotation value
             Vector3 forceToAdd = Vector3.Scale(new Vector3(forceScale, forceScale, forceScale), playerCamera.GetComponent<Camera>().transform.forward); //find the force vector scaled up according to the value specified, in the direction of the player's camera
-            thisProjectile.GetComponent<Rigidbody>().AddRelativeForce(forceToAdd,ForceMode.Impulse) ;
+            thisProjectile.GetComponent<Rigidbody>().AddForce(forceToAdd,ForceMode.Impulse) ;
             projectileSourceController.GetComponent<ProjectileSourceCtrl>().deleteProjectileSource();
         }
     }

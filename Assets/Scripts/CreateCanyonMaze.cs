@@ -13,6 +13,7 @@ public class CreateCanyonMaze : MonoBehaviour
     public float mazeSouthLimit;
     public float completeTileSideLength = 6f;
     public float gapBetweenTile = 2f;
+    public GameObject mazeController;
     // Start is called before the first frame update
 
 
@@ -65,6 +66,7 @@ public class CreateCanyonMaze : MonoBehaviour
                 }
             }
         }
+        mazeController.GetComponent<MazeControl>().initialize(tiles); //initialize the maze controller who will keep track of whether the maze is still solvable
 
     }
 
